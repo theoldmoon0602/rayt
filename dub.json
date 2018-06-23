@@ -4,5 +4,7 @@
 		"theoldmoon0602"
 	],
 	"description": "A minimal D application.",
-	"license": "proprietary"
+	"license": "proprietary",
+  "buildOptions": ["releaseMode", "optimize"],
+  "dflags-ldc": ["-O3"]
 }
