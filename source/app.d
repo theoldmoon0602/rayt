@@ -7,6 +7,7 @@ import std.range;
 import std.typecons;
 import std.meta;
 import std.algorithm;
+import std.conv;
 
 import v;
 
@@ -114,7 +115,7 @@ Tuple!(V, V) tangentSpace(const(V) n) {
     );
 }
 
-void main()
+void main(string[] args)
 {
   const uint w = 1200;
   const uint h = 800;
@@ -139,8 +140,8 @@ void main()
   const auto vE = cross(wE, uE);
 
   Scene scene;
-  const spp = 50;
-  const depth = 10;
+  const spp = (args.length >= 2) ? args[1].to!int : 10;
+  const depth = (args.length >= 3) ? args[2].to!int : 2;
   
   foreach (i; iota(w*h).parallel) {
     auto x = i %w;
