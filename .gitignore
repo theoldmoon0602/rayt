@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+rayt
+rayt.so
+rayt.dylib
+rayt.dll
+rayt.a
+rayt.lib
+rayt-test-*
+*.exe
+*.o
+*.obj
+*.lst
